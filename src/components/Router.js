@@ -3,6 +3,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Root'
 import Home from './home/Home'
 import Contactus from './contactus/Contactus'
+import Login from './login/Login'
+import DonarRegister from './register/DonarRegister'
+import VolunteerRegister from './register/VolunteerRegister'
+import Register from './register/Register'
+import DonarDashboard  from './donar-dashboard/DonarDashboard'
+
 
 function Router() {
     let router=createBrowserRouter([
@@ -10,19 +16,13 @@ function Router() {
             path:"/",
             element:<Root/>,
             children:[  
+              {
+                path:'/',
+                element:<Home />
+              },
                 {
                     path:"",
                     element:<Login/>,
-                    children:[
-                      {
-                        path:"/donar-login",
-                        element:<DonarLogin/>
-                      },
-                      {
-                        path:"/volunteer-login",
-                        element:<VolunteerLogin/>
-                      }
-                    ]
                 },
                 {
                     path:"/contactus",
