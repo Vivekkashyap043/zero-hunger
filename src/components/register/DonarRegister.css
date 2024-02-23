@@ -1,0 +1,63 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border-radius: 25px;
+    background-color: white;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+.main-custom{
+    display: flex;
+    width: 900px;
+    height: 620px;
+    margin-top: 95px;
+    margin-left: 490px;
+}
+.icons{
+    padding-top: 18px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+img{
+    width: 40px;
+    border-radius: 5px;
+}
+.in1,.in2,.in3,.in4{
+    margin-top: 18px;
+}
+#name,#mail,#pno,#age{
+    width: 80%;
+    padding: 10px;
+    background-color:rgba(167, 135, 135, 0.082);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+button{
+    margin-top: 23px;
+    width: 130px;
+    padding: 10px;
+    border: none;
+    color: #ffffff;
+    background-color:  #FE5358;
+    border-radius: 30px;
+    font-weight: 500;
+}
+button:hover{
+    cursor: pointer;
+}
