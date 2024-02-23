@@ -1,8 +1,13 @@
 import React from 'react'
+import {useForm} from 'react-hook-form'
+import {Link} from 'react-router-dom'
 
-import {Outlet,NavLink} from 'react-router-dom'
+function DonarLogin() {
+  let {register,handleSubmit,formState:{errors}} = useForm()
 
-function Login() {
+  function onLoginFormSubmit(userCredentialsObject){
+  
+  }
   return (
     <div>
       <h1 className='text-info text-center'>User Login</h1>
@@ -22,7 +27,7 @@ function Login() {
 
         <button type='submit' className='btn btn-success text-light d-block mx-auto'>Login</button>
         <p className="lead text-center">
-        New User 
+        Not registered yet? 
         <Link to="/register" className="fs-4 px-3">
           Register
         </Link>
@@ -30,9 +35,8 @@ function Login() {
       </p>
       </form>
 
-     
     </div>
   )
 }
 
-export default Login
+export default DonarLogin
