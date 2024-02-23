@@ -2,11 +2,22 @@ import { useForm } from "react-hook-form";
 import {useState} from 'react'
 
 function DonarRegister() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+    let [users,setUsers]=useState([])
 
-export default DonarRegister
+
+    let { register, handleSubmit, formState: { errors }} = useForm();
+  
+    function handleFormSubmit(userObj) {
+      setUsers([...users,userObj])
+    }
+
+  return (
+      <div >
+          <form>
+
+          </form>
+      </div>
+ )
+  }
+    
+export default DonarRegister;
