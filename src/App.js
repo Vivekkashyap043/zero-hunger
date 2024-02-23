@@ -1,11 +1,10 @@
 
 import Contactus from './components/contactus/Contactus';
-import Login from './components/login/Login'
 
 function App() {
   return (
     <div >
-     <Login />
+     <Contactus />
     </div>
   );
 }
