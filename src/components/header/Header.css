@@ -2,6 +2,10 @@
     background-color: #FE5358;
 }
 
-.target{
+.nav-link{
     color: #FFFF;
+}
+
+.target{
+    color:white;
 }
