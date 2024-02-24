@@ -2,3 +2,11 @@
     display: block;
     width: 50%;
 }
+
+.ch1{
+    max-width: 60%;
+}
+
+.ch2{
+    margin-top: 10px;
+}
