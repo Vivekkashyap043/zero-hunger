@@ -6,7 +6,7 @@ function Header() {
   return (
     <ul className="nav justify-content-end bg-dark p-3 fs-4">
     <li className="nav-item">
-      <NavLink className="nav-link" to=" ">
+      <NavLink className="nav-link" to="">
         HOME
       </NavLink>
     </li>
