@@ -60,7 +60,7 @@ function DonarRegister() {
               {res.status==="register" && (
                       <p className="text-success text-center m-0">Registered Successfully</p>
               )}
-          <button type="submit" className="fs-5 mt-1">Register</button>
+          <button type="submit" className="fs-5 mt-2">Register</button>
         </div>
       </div>
     </form>

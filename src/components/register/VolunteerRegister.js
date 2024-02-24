@@ -27,16 +27,16 @@ return (
         </div>
         <div>
           <div className="in1">
-          <input type="text" placeholder="Enter your name" {...register("username", { required: true })}/>
+          <input type="text" className="field" placeholder="Enter your name" {...register("username", { required: true })}/>
         </div>
         <div className="in4">
-          <input type="number" placeholder="Enter your age" {...register("age", { required: true })}/>
+          <input type="number"  className="field" placeholder="Enter your age" {...register("age", { required: true })}/>
           </div>
           <div className="in3">
-          <input type="number"  placeholder="Enter your phone number" {...register("phonenumber", { required: true })}/>
+          <input type="number"  className="field"  placeholder="Enter your phone number" {...register("phonenumber", { required: true })}/>
           </div>
           <div className="in4">
-          <input type="password"  placeholder="Password" {...register("passsword", { required: true })}/>
+          <input type="password"  className="field"  placeholder="Password" {...register("passsword", { required: true })}/>
           </div>
           </div>
           <div className="gen">

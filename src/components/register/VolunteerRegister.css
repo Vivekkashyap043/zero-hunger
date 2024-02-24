@@ -65,7 +65,7 @@ img{
 .in5{
     margin-top: 8px;
 }
-#name,#pno,#age,#pwd,#file{
+.field{
     width: 80%;
     padding: 10px;
     background-color:rgba(167, 135, 135, 0.082);
