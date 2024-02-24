@@ -31,7 +31,8 @@ form{
 }
 .icons{
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,6 +57,7 @@ form{
 img{
     width: 40px;
     border-radius: 5px;
+    margin-bottom: 0px;
 }
 .in1,.in2,.in3,.in4{
     margin-top: 18px;

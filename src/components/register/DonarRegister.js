@@ -54,15 +54,15 @@ function DonarRegister() {
             <div className="in4">
             <input type="password" className="field" placeholder="Enter your password"  {...register("password", { required: true })}/>
             </div>
-          <button type="submit" className="fs-5">Register</button>
-        </div>
-      </div>
-      {res.status==="exist" && (
-                      <p className="text-danger text-center">You have Already registered</p>
+            {res.status==="exist" && (
+                      <p className="text-danger text-center m-0">You have Already registered</p>
               )}
               {res.status==="register" && (
-                      <p className="text-success text-center">Registered Successfully</p>
+                      <p className="text-success text-center m-0">Registered Successfully</p>
               )}
+          <button type="submit" className="fs-5 mt-1">Register</button>
+        </div>
+      </div>
     </form>
       </div>
  )
