@@ -50,7 +50,7 @@ function Router() {
           element: <Register />,
         },
         {
-          path: "",
+          path: "donar-register",
           element: <DonarRegister />
         },
         {

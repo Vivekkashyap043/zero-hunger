@@ -3,8 +3,8 @@ import './Contactus.css';
 
 function Contactus() {
   return (
-    <div className='background'>
-      
+    <div >
+      Contact us
     </div>
   )
 }
