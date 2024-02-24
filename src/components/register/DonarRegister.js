@@ -2,18 +2,35 @@ import { useForm } from "react-hook-form";
 import {useState} from 'react'
 import './DonarRegister.css'
 function DonarRegister() {
-    let [users,setUsers]=useState([])
 
+    let [res, setRes]=useState({})
 
     let { register, handleSubmit, formState: { errors }} = useForm();
   
-    function handleFormSubmit(userObj) {
-      setUsers([...users,userObj])
+    async function onDonarRegister(donarObj) {
+      try {
+        const response = await fetch("http://localhost:4000/donar/register", {
+          method: "POST",
+          body: JSON.stringify(donarObj),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        if (!response.ok) {
+          throw new Error('Network response was not ok.');
+        }
+        const data = await response.json();
+        setRes(data);
+        console.log(data); // Logging data instead of res
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
+    
 
   return (
       <div >
-          <form>
+          <form onSubmit={handleSubmit(onDonarRegister)}>
       <div class="main-custom">
         <div class="left">
           <div class="up">
@@ -26,20 +43,26 @@ function DonarRegister() {
           </div>
           <div>
             <div className="in1">
-            <input type="text" name="name" id="name" placeholder="Enter your name"/>
+            <input type="text" className="field" placeholder="Enter your name" {...register("username", { required: true })}/>
           </div>
             <div className="in2"></div>
-            <input type="email" name="mail" id="mail" placeholder="Enter your email"/>
+            <input type="number" className="field" placeholder="Enter your age" {...register("age", { required: true })}/>
             </div>
             <div className="in3">
-            <input type="number" name="pno" id="pno" placeholder="Enter your phone number"/>
+            <input type="number" className="field" placeholder="Enter your phone number"  {...register("phonenumber", { required: true })}/>
             </div>
             <div className="in4">
-            <input type="number" name="age" id="age" placeholder="Enter your age"/>
+            <input type="password" className="field" placeholder="Enter your password"  {...register("password", { required: true })}/>
             </div>
           <button type="submit" className="fs-5">Register</button>
         </div>
       </div>
+      {res.status==="exist" && (
+                      <p className="text-danger text-center">You have Already registered</p>
+              )}
+              {res.status==="register" && (
+                      <p className="text-success text-center">Registered Successfully</p>
+              )}
     </form>
       </div>
  )

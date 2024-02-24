@@ -1,0 +1,86 @@
+*{
+    margin: 10;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    /* background-image: url('https://images.pexels.com/videos/19353624/4-k-drone-4k-beach-beaches-19353624.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=400&h=250&fit=crop&crop=focalpoint');
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left{
+    width: 50%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 25px;
+    background-color: white;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+.main-custom{
+    display: flex;
+    width: 900px;
+    height: 740px;
+    margin-top: 20px;
+    margin-left: 490px;
+    margin-bottom: 20px;
+}
+.icons{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.genm{
+    font-size: large;
+
+}
+.gen{
+    margin:10px 0px 0px 50px;
+    display: flex;
+}
+.genc{
+    margin :13px 20px 0px 20px;
+}
+.re{
+    margin: 0px 0px 0px 45px;
+    padding-top: 10px;
+    text-align: left;
+}
+img{
+    width: 40px;
+    border-radius: 5px;
+}
+.in1,.in2,.in3,.in4{
+    margin-top: 18px;
+}
+.in5{
+    margin-top: 8px;
+}
+#name,#pno,#age,#pwd,#file{
+    width: 80%;
+    padding: 10px;
+    background-color:rgba(167, 135, 135, 0.082);
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+button{
+    margin-top: 15px;
+    width: 130px;
+    padding: 10px;
+    border: none;
+    color: #ffffff;
+    background-color:  #FE5358;
+    border-radius: 30px;
+    font-weight: 500;
+}
+button:hover{
+    cursor: pointer;
+}

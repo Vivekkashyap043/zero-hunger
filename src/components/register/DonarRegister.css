@@ -39,7 +39,7 @@ img{
 .in1,.in2,.in3,.in4{
     margin-top: 18px;
 }
-#name,#mail,#pno,#age{
+.field{
     width: 80%;
     padding: 10px;
     background-color:rgba(167, 135, 135, 0.082);
