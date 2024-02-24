@@ -32,7 +32,7 @@ function Router() {
           element: <Login />,
           children: [
             {
-              path: "",
+              path: "donar",
               element: <DonarLogin />
             },
             {
@@ -58,7 +58,7 @@ function Router() {
           element: <VolunteerRegister />
         },
         {
-          path: "donar-dashboard",
+          path: "donar-dashboard/:username",
           element: <DonarDashboard />
         }
       ]

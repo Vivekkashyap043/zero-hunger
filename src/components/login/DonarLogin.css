@@ -17,13 +17,17 @@ form{
     background-color: white;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin: auto;
+    margin-left: 20%;
+    margin-top: 0%;
+    
 }
 .main-custom{
     display: block;
     width: 900px;
-    height: 620px;
+    height: 70%;
     margin: auto;
+    margin-top: 0%;
+    margin-bottom: 10%;
 }
 .icons{
     padding-top: 18px;
@@ -37,10 +41,8 @@ img{
     width: 40px;
     border-radius: 5px;
 }
-.in1,.in2,.in3,.in4{
+.in1,.in2{
     margin-top: 18px;
-}
-#name,#mail,#pno,#age{
     width: 80%;
     padding: 10px;
     background-color:rgba(167, 135, 135, 0.082);

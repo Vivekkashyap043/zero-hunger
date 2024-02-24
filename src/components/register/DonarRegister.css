@@ -39,6 +39,7 @@ img{
 .in1,.in2,.in3,.in4{
     margin-top: 18px;
 }
+
 .field{
     width: 80%;
     padding: 10px;
@@ -47,6 +48,7 @@ img{
     outline: none;
     border: none;
 }
+
 button{
     margin-top: 23px;
     width: 130px;

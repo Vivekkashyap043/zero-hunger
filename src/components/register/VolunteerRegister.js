@@ -7,9 +7,26 @@ function VolunteerRegister() {
 
 
   let { register, handleSubmit, formState: { errors }} = useForm();
+  let [res, setRes]=useState({})
 
-  function onVolunteerRegister(volunteerObj) {
-
+  async function onVolunteerRegister(volunteerObj) {
+    try {
+      const response = await fetch("http://localhost:4000/volunteer/register", {
+        method: "POST",
+        body: JSON.stringify(volunteerObj),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+      const data = await response.json();
+      setRes(data);
+      console.log(data); // Logging data instead of res
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
 return (
@@ -36,7 +53,7 @@ return (
           <input type="number"  className="field"  placeholder="Enter your phone number" {...register("phonenumber", { required: true })}/>
           </div>
           <div className="in4">
-          <input type="password"  className="field"  placeholder="Password" {...register("passsword", { required: true })}/>
+          <input type="password"  className="field"  placeholder="Password" {...register("password", { required: true })}/>
           </div>
           </div>
           <div className="gen">
@@ -44,16 +61,22 @@ return (
           <p>Gender:</p>
           </div>
             <div className="genc">
-                <input type="radio" name="Gender" id="male"/>
+                <input type="radio" name="gender" id="male" value="male" {...register("gender", { required: true })}/>
                 <label for="male">Male</label>
             </div>
             <div className="genc">
-                <input type="radio" name="Gender" id="female"/>
+                <input type="radio" name="gender" id="female" value="female" {...register("gender", { required: true })}/>
                 <label for="female">Female</label>
             </div>
         </div>
         <div>
-        <button type="submit" className="fs-5 mb-5 mt-0">Register</button>
+        {res.status==="exist" && (
+                      <p className="text-danger text-center m-0">You have Already registered</p>
+              )}
+              {res.status==="register" && (
+                      <p className="text-success text-center m-0">Registered Successfully</p>
+              )}
+        <button className="fs-5 mb-5 mt-0">Register</button>
       </div>
     </div>
     </div>
